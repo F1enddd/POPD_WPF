@@ -1,0 +1,90 @@
+﻿<Window x:Class="POPD_WPF.WindowThemes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:models="clr-namespace:POPD_WPF.Models"
+        xmlns:local="clr-namespace:POPD_WPF"
+        mc:Ignorable="d"
+        Height="500" Width="700" AllowsTransparency="True" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen" >
+    <Border Background="White" CornerRadius="20">
+        <Grid>
+            <Grid VerticalAlignment="Top" Background="Transparent" Height="40" MouseDown="Grid_MouseDown">
+                <Border Background="LightGray" CornerRadius="20 20 0 0"/>
+
+                <TextBlock Text="Темы" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40 0 0 0" FontSize="20" FontWeight="Bold" x:Name="TBTitle"/>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFloatingActionButton}" Height="25" Width="25" Background="Gray" BorderBrush="Gray" x:Name="ButtonBack" Margin="10 0 0 0" Click="ButtonBack_Click">
+                    <StackPanel>
+                        <md:PackIcon Kind="ArrowBack"/>
+                    </StackPanel>
+                </Button>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFloatingActionButton}" Height="25" Width="25" Margin="0 0 10 0" Background="Red" BorderBrush="Red" x:Name="ButtonClose" Click="ButtonClose_Click">
+                    <StackPanel>
+                        <md:PackIcon Kind="WindowClose"/>
+                    </StackPanel>
+                </Button>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFloatingActionButton}" Height="25" Width="25" Margin="0 0 40 0" Background="Lime" BorderBrush="Lime" x:Name="ButtonMinimize" Click="ButtonMinimize_Click">
+                    <StackPanel>
+                        <md:PackIcon Kind="WindowMinimize"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid Margin="0 40 0 0">
+                <TreeView>
+                    <TreeViewItem Header="Тема 1">
+                        <TreeViewItem Header="ИП_ правовой статус и регистрация.pptx" MouseDoubleClick="TreeViewItem_MouseDoubleClick"/>
+                        <TreeViewItem Header="Понятие и признаки субъектов предпринимательской деятельности. Виды субъектов предпринимательского права. Формы собственности в РФ..docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_1"/>
+                        <TreeViewItem Header="Правовой статус индивидуального предпринимателя. Государственная регистрация Гражданская правоспособность.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_4"/>
+                        <TreeViewItem Header="Субъекты предпринимательского права (1).pptx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_2"/>
+                        <TreeViewItem Header="Экономические споры и иск в арбитраже.pptx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_3"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Тема 2">
+                        <TreeViewItem Header="3333.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_5"/>
+                        <TreeViewItem Header="1112159.pptx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_6"/>
+                        <TreeViewItem Header="Занятость и трудоустройство.mp4" MouseDoubleClick="TreeViewItem_MouseDoubleClick_7"/>
+                        <TreeViewItem Header="Практическая Трудовые споры.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_8"/>
+                        <TreeViewItem Header="Трудовые споры 2.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_9"/>
+                        <TreeViewItem Header="Трудовые споры_ путь к согласию (1).pptx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_10"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Тема 3">
+                        <TreeViewItem Header="Понятие и виды информационных ресурсов">
+                            <TreeViewItem Header="Понятие и виды информационных ресурсов.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_11"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Правовое регулирование деятельности СМИ">
+                            <TreeViewItem Header="Pravovye_aspekty_dejatel6nosti_SMI.ppt" MouseDoubleClick="TreeViewItem_MouseDoubleClick_12"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Правовые режимы">
+                            <TreeViewItem Header="На дом. Конспект.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_13"/>
+                            <TreeViewItem Header="Правовые режимы информации.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_14"/>
+                            <TreeViewItem Header="Правовые рижимы информации.pptx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_15"/>
+                            <TreeViewItem Header="Распечатать.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_16"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Презентация на тему _Право в области информации_.pptx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_17"/>
+                        <TreeViewItem Header="Режимы защиты информации для IT-специалиста.pptx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_18"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Тема 4">
+                        <TreeViewItem Header="Административные правонарушения" >
+                            <TreeViewItem Header="wepik-analiz-administrativnyx-pravonarusenii-problemy-i-reseniia-20231210105900BB44.pdf" MouseDoubleClick="TreeViewItem_MouseDoubleClick_19"/>
+                            <TreeViewItem Header="Админестративные правонарушения.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_20"/>
+                            <TreeViewItem Header="Задание.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_21"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="Понятие административной ответственности, ее цели, функции и признаки" >
+                            <TreeViewItem Header="wepik-administrativnaia-otvetstvennost-celi-funkcii-i-priznaki-20231210111632F1zE.pdf" MouseDoubleClick="TreeViewItem_MouseDoubleClick_22"/>
+                            <TreeViewItem Header="Административная ответственность.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_23" />
+                            <TreeViewItem Header="Задание.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_24"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="ПР административные право нарушения">
+                            <TreeViewItem Header="Задание_по_административным_правонарушениям.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_25"/>
+                            <TreeViewItem Header="Источники_по_административным_правонарушениям.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_26"/>
+                        </TreeViewItem>
+                        <TreeViewItem Header="19418.ppt" MouseDoubleClick="TreeViewItem_MouseDoubleClick_27"/>
+                        <TreeViewItem Header="Админестративное правонарушение.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_28"/>
+                    </TreeViewItem>
+                    <TreeViewItem Header="Административная ответственность.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_29"/>
+                    <TreeViewItem Header="Заработная плата.docx" MouseDoubleClick="TreeViewItem_MouseDoubleClick_30"/>
+                </TreeView>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

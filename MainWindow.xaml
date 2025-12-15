@@ -1,0 +1,38 @@
+﻿<Window x:Class="POPD_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:POPD_WPF"
+        mc:Ignorable="d"
+        Height="370" Width="300" AllowsTransparency="True" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen">
+    <Border Background="White" CornerRadius="20">
+        <Grid>
+            <Grid VerticalAlignment="Top" Background="Transparent" Height="40" MouseDown="Grid_MouseDown">
+                <Border Background="LightGray" CornerRadius="20 20 0 0"/>
+                <TextBlock Text="Выбор" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="5 0 0 0" FontSize="20" FontWeight="Bold"/>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFloatingActionButton}" Height="25" Width="25" Margin="0 0 10 0" Background="Red" BorderBrush="Red" x:Name="ButtonClose" Click="ButtonClose_Click">
+                    <StackPanel>
+                        <md:PackIcon Kind="WindowClose"/>
+                    </StackPanel>
+                </Button>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFloatingActionButton}" Height="25" Width="25" Margin="0 0 40 0" Background="Lime" BorderBrush="Lime" x:Name="ButtonMinimize" Click="ButtonMinimize_Click">
+                    <StackPanel>
+                        <md:PackIcon Kind="WindowMinimize"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <StackPanel Orientation="Vertical" Margin="0 0 0 10">
+            <Border Background="{StaticResource MaterialDesign.Brush.Primary.Light}" Margin="5 50 5 5" CornerRadius="10">
+                <TextBlock Text="Суслов. ПОПД. Зачёт" FontSize="30" VerticalAlignment="Top" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center"/>
+            </Border>
+            <Button Content="Регистрация/Авторизация" Margin="5 20 5 5" Height="50" md:ButtonAssist.CornerRadius="10" x:Name="ButtonRegistration" Click="ButtonRegistration_Click"/>
+            <Button Content="Темы и конспекты" Margin="5 20 5 5" Height="50" md:ButtonAssist.CornerRadius="10" x:Name="ButtonThemes" Click="ButtonThemes_Click"/>
+                <Button Margin="5 20 5 5" md:ButtonAssist.CornerRadius="10" Height="50" x:Name="ButtonAdm" Click="ButtonAdm_Click">
+                <TextBlock TextWrapping="Wrap" Text="30 Административных правонарушений" TextAlignment="Center" />
+            </Button>
+        </StackPanel>
+        </Grid>
+    </Border>
+</Window>

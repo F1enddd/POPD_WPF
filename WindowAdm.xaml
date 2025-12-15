@@ -1,0 +1,65 @@
+﻿<Window x:Class="POPD_WPF.WindowAdm"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:md="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:local="clr-namespace:POPD_WPF"
+        mc:Ignorable="d"
+        Height="500" Width="700" AllowsTransparency="True" Background="Transparent" WindowStyle="None" WindowStartupLocation="CenterScreen" >
+    <Border Background="White" CornerRadius="20">
+        <Grid>
+            <Grid VerticalAlignment="Top" Background="Transparent" Height="40" MouseDown="Grid_MouseDown">
+                <Border Background="LightGray" CornerRadius="20 20 0 0"/>
+
+                <TextBlock Text="30 адм. правонарушений" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="40 0 0 0" FontSize="20" FontWeight="Bold" x:Name="TBTitle"/>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Left" Style="{StaticResource MaterialDesignFloatingActionButton}" Height="25" Width="25" Background="Gray" BorderBrush="Gray" x:Name="ButtonBack" Margin="10 0 0 0" Click="ButtonBack_Click">
+                    <StackPanel>
+                        <md:PackIcon Kind="ArrowBack"/>
+                    </StackPanel>
+                </Button>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFloatingActionButton}" Height="25" Width="25" Margin="0 0 10 0" Background="Red" BorderBrush="Red" x:Name="ButtonClose" Click="ButtonClose_Click">
+                    <StackPanel>
+                        <md:PackIcon Kind="WindowClose"/>
+                    </StackPanel>
+                </Button>
+                <Button VerticalAlignment="Center" HorizontalAlignment="Right" Style="{StaticResource MaterialDesignFloatingActionButton}" Height="25" Width="25" Margin="0 0 40 0" Background="Lime" BorderBrush="Lime" x:Name="ButtonMinimize" Click="ButtonMinimize_Click">
+                    <StackPanel>
+                        <md:PackIcon Kind="WindowMinimize"/>
+                    </StackPanel>
+                </Button>
+            </Grid>
+            <Grid Margin="0 40 0 0">
+                <ListView x:Name="ListViewAdm" Margin="5">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <Border CornerRadius="10" Background="{StaticResource MaterialDesign.Brush.Primary.Light}">
+                                <Expander Width="650" Background="Transparent" >
+                                    <Expander.Header>
+                                        <StackPanel Orientation="Horizontal" Margin="0 10 0 10">
+                                            <TextBlock Text="{Binding Id, StringFormat={}№{0}}" FontWeight="DemiBold"/>
+                                            <TextBlock Margin="10 0 0 0" Text="{Binding Article, StringFormat={}КоАП:{0}}" FontWeight="DemiBold"/>
+                                            <TextBlock Margin="10 0 0 0" Text="{Binding Name}" FontWeight="DemiBold"/>
+                                        </StackPanel>
+                                    </Expander.Header>
+                                    
+                                    <Expander.Content>
+                                        <StackPanel Orientation="Vertical">
+                                            <TextBlock Text="{Binding Description, StringFormat={}Описание: {0}}" Margin="10 5 0 0"/>
+                                            <TextBlock Text="{Binding Subject, StringFormat={}Субьект: {0}}" Margin="10 5 0 0"/>
+                                            <TextBlock Text="{Binding Punishment, StringFormat={}Мера наказания: {0}}" Margin="10 5 0 0"/>
+                                            <TextBlock Text="{Binding Authority, StringFormat={}Орган\, рассматривающий дело: {0}}" Margin="10 5 0 0"/>
+                                            <TextBlock Text="{Binding Example, StringFormat={}Пример: {0}}" Margin="10 5 0 10"/>
+                                        </StackPanel>
+                                    </Expander.Content>
+                                    
+                                    
+                                </Expander>
+                            </Border>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

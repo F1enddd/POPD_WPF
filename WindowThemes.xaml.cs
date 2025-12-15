@@ -59,11 +59,11 @@ namespace POPD_WPF
 
         private void TreeViewItem_MouseDoubleClick_1(object sender, MouseButtonEventArgs e)
         {
-            OpenFile(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "Themes", "Тема 1. Правовое регулирование экономических отношений на примере предпринимательской деятельности", "Понятие и признаки субъектов предпринимательской деятельности. Виды субъектов предпринимательского права. Формы собственности в РФ..docx"));
+            OpenFile(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "Themes", "Тема 1. Правовое регулирование экономических отношений на примере предпринимательской деятельности", "Понятие и признаки субъектов предпринимательской деятельности.docx"));
         }
         private void TreeViewItem_MouseDoubleClick_4(object sender, MouseButtonEventArgs e)
         {
-            OpenFile(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "Themes", "Тема 1. Правовое регулирование экономических отношений на примере предпринимательской деятельности", "Правовой статус индивидуального предпринимателя. Государственная регистрация Гражданская правоспособность.docx"));
+            OpenFile(System.IO.Path.Combine(Directory.GetCurrentDirectory(), "Themes", "Тема 1. Правовое регулирование экономических отношений на примере предпринимательской деятельности", "Правовой статус индивидуального предпринимателя.docx"));
         }
 
         private void TreeViewItem_MouseDoubleClick_2(object sender, MouseButtonEventArgs e)
